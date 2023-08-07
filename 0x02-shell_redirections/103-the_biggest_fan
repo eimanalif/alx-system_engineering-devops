@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -f 1 web_server_log.tsv | uniq -c | sort -nr | head -n 11
+cut -f 1 *.tsv | uniq -c | sort -nr | head -n 11
