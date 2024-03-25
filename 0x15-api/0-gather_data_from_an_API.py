@@ -8,16 +8,16 @@ import sys
 
 
 if __name__ = "__main__":
-    #base URL for the JSONPlaceholder API
+    # base URL for the JSONPlaceholder API
     url = "https://jsonplaceholder.typicode.com/"
 
-    #get employee information
+    # get employee information
     employee_id = sys.argv[1]
     user = requests.get(url + "user/{}".format(employee_id)).json()
 
-    #Get the to-do list
-     params = {"userId": employee_id}
-     todos = requests.get(url + "todos", params).json()
+    # Get the to-do list
+    params = {"userId": employee_id}
+    todos = requests.get(url + "todos", params).json()
     # Filter completed tasks and count them
     completed = [t.get("title") for t in todos if t.get("completed") is True]
 
@@ -27,4 +27,3 @@ if __name__ = "__main__":
 
     # Print the completed tasks one by one with indentation
     [print("\t {}".format(complete)) for complete in completed]
-~                
