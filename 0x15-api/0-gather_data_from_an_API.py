@@ -7,7 +7,7 @@ import requests
 import sys
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     # base URL for the JSONPlaceholder API
     url = "https://jsonplaceholder.typicode.com/"
 
