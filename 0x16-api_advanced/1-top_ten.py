@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """
 Script to print hot posts on given Reddit subreddit.
