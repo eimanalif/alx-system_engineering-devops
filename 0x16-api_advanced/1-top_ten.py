@@ -3,7 +3,7 @@
 
 
 def top_ten(subreddit):
-    """Queries the Reddit API and returns the top 10 hot posts
+    """Queries Reddit API and returns the top 10 hot posts
     of the subreddit"""
     import requests
 
