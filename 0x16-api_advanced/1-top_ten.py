@@ -1,18 +1,23 @@
 #!/usr/bin/python3
-"""Module for task 1"""
+"""Get number of subscribers for a given subreddit in REDDIT's API,
+invalid subreddit should return 0"""
+import requests
 
 
 def top_ten(subreddit):
-    """Queries Reddit API and returns the top 10 hot posts
-    of the subreddit"""
-    import requests
+    URL = 'https://www.reddit.com'
+    header = {'user-agent': 'miguel/0.0.1'}
+    req = requests.get(URL + '/r/' + subreddit + '/hot.json', headers=header,
+                       allow_redirects=False)
 
-    sub_info = requests.get("https://www.reddit.com/r/{}/hot.json?limit=10"
-                            .format(subreddit),
-                            headers={"User-Agent": "My-User-Agent"},
-                            allow_redirects=False)
-    if sub_info.status_code >= 300:
-        print('None')
+    if req.status_code == 200:
+        data = req.json()
+        i = 0
+        for item in data['data']['children']:
+            if i < 10:
+                print(item['data']['title'])
+            else:
+                break
+            i += 1
     else:
-        [print(child.get("data").get("title"))
-         for child in sub_info.json().get("data").get("children")]
+        print(None)
