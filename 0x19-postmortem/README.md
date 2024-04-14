@@ -1,50 +1,29 @@
-# Postmortem: The Great Banana Split Incident 🍌🔥
+# Postmortem: The Great Nginx Banana Incident 🍌
 
 ## Issue Summary
-- **Duration**: April 1, 2024, 10:00 AM - 2:30 PM (UTC-5)
-- **Impact**: Our beloved Quantum Banana Network (QBN) experienced a catastrophic outage, leaving 50% of users fruitlessly entangled.
-- **Root Cause**: A quantum banana split disrupted the delicate balance of potassium particles, causing a fruity fiasco.
+- **Duration**: A wild **2-hour** rollercoaster ride (from **10:00 AM to 12:00 PM, UTC-7**).
+- **Impact**: Picture this: the web service went *poof*! Users were left hanging, waiting for pages to load like they were stuck in a slow-motion Matrix scene. Approximately **30%** of our beloved users were affected.
+- **Root Cause**: Brace yourselves—**Nginx**, our trusty web server, decided to play hide-and-seek with the backend service. Spoiler alert: it lost.
 
 ## Timeline
-- **10:00 AM**: Monitoring system detected quantum fluctuations resembling a banana waltz.
-- **10:15 AM**: Engineer noticed ripe bananas spontaneously turning into plantains.
-- **10:30 AM**: Assumed cosmic interference from rogue banana peels.
-- **11:00 AM**: Investigated banana-to-potassium conversion rates (misleading path).
-- **12:00 PM**: Escalated incident to the FruitOps team.
-- **1:00 PM**: FruitOps confirmed quantum banana split.
-- **1:30 PM**: Incident escalated to the Chief Banana Officer (CBO).
-- **2:00 PM**: CBO initiated emergency banana dance protocol.
+- **10:00 AM**: Our monitoring system, the diligent watchdog, barked an alert. Something was amiss!
+- **10:05 AM**: We donned our digital detective hats. Initial hunch: the backend service had a meltdown. Sherlock vibes, anyone?
+- **10:30 AM**: Followed misleading breadcrumbs. Turns out, the backend was innocent. Oopsie!
+- **11:00 AM**: Emergency flare! DevOps team assembled. We needed Gandalf-level magic.
+- **11:30 AM**: Eureka moment: Nginx was moonwalking with a misconfigured proxy_pass. No wonder requests vanished into thin air!
+- **12:00 PM**: Victory dance! We tweaked the Nginx config, and voilà—the web service resurrected like a caffeinated zombie.
 
 ## Root Cause and Resolution
-- **Cause**: Quantum banana entanglement misalignment due to solar flare-induced potassium chaos.
-    - Bananas oscillated between states of ripeness and existential confusion.
-    - Quantum peels interfered with signal propagation.
-- **Resolution**:
-    - **Step 1**: Rebooted QBN servers using a banana-powered quantum reset button.
-    - **Step 2**: Performed synchronized banana splits to restore entanglement harmony.
-    - **Step 3**: Applied potassium-ion shields to prevent future splits.
-    - **Step 4**: Rebalanced quantum chakras with a mango mantra.
+- **Root Cause**: Our Nginx server was channeling its inner rebel. The proxy_pass setting was like a GPS sending users to Narnia instead of the backend.
+- **Resolution**: We whipped Nginx into shape, updated the config, and pointed it to the right destination. No more interdimensional detours!
 
 ## Corrective and Preventative Measures
-1. **Quantum Banana Patch**:
-    - Develop patch to stabilize entanglement during solar flares.
-    - Add banana peel monitoring to detect rogue fluctuations.
-2. **Banana Firewall**:
-    - Filter cosmic banana radiation using ripe-banana-shaped firewalls.
-    - Deploy pineapple proxies for added protection.
-3. **Quantum Dance Training**:
-    - Train engineers in synchronized banana splits.
-    - Organize weekly quantum dance-offs for team bonding.
-
-### Diagram: Quantum Banana Entanglement
-```
-   🍌
-  / \
- 🍌---🍌
-  \ /
-   🍌
-```
-
-In conclusion, the QBN is back online, and we've learned that even in the quantum realm, bananas can be both the problem and the solution. 🍌🔬
+- **Improvements**:
+    - **Nginx Config Reviews**: Regular checkups to prevent config chaos.
+    - **Automated Sanity Tests**: Nginx configs need their own sanity checks. We're talking "Are you bananas?" level.
+    - **Misconfig Detection Radar**: Better monitoring to catch Nginx doing the cha-cha with settings.
+- **Tasks**:
+    1. **Patch Nginx Server**: Fix that proxy_pass (TODO: add a dash of common sense).
+    2. **Memory Monitoring**: Because even servers need a mental health check (TODO: set up a memory therapist).
 
 ---
